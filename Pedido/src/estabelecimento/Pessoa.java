@@ -1,6 +1,6 @@
 package estabelecimento;
 
-public class Cliente {
+public class Pessoa {
 	private int codigo;
 	private String nome, email;
 	

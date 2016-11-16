@@ -75,14 +75,14 @@ public class ListaPedidos {
 		return pedidosPorVendedor;
 	}
 	
-	public List<Cliente> clientesMaioresPorPeriodo (Date inicio, Date fim, int nMaiores){
-		List<Cliente> maioresClientes = new ArrayList<>();
+	public List<Pessoa> clientesMaioresPorPeriodo (Date inicio, Date fim, int nMaiores){
+		List<Pessoa> maioresClientes = new ArrayList<>();
 		List<Double> maioresSomas = new ArrayList<>();
 		
 		
 			for (Pedido ped: getLista()){
 				double soma=0;
-				Cliente c = ped.getCliente();
+				Pessoa c = ped.getCliente();
 				int menorSomaIndice=0;
 				double menorSoma=0;
 				boolean mesmoCliente = false;
@@ -93,7 +93,7 @@ public class ListaPedidos {
 				if (ped.getDtInicio().getTime()>=inicio.getTime() && ped.getDtFim().getTime()<=fim.getTime()){
 					
 					if (maioresSomas.size()<=nMaiores){
-						for(Cliente cli : maioresClientes){
+						for(Pessoa cli : maioresClientes){
 							if (c.getCodigo()==cli.getCodigo()){
 								mesmoCliente = true;
 								soma+=maioresSomas.get(maioresClientes.indexOf(cli));
@@ -107,7 +107,7 @@ public class ListaPedidos {
 						}
 					} else {
 						
-						for(Cliente cli : maioresClientes){
+						for(Pessoa cli : maioresClientes){
 							if (c.getCodigo()==cli.getCodigo()){
 								mesmoCliente = true;
 								soma+=maioresSomas.get(maioresClientes.indexOf(cli));

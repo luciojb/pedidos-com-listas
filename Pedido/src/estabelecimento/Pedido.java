@@ -6,13 +6,13 @@ import java.util.ArrayList;
 public class Pedido extends Operacao{
 	private int codigo;
 	private Vendedor vendedor;
-	private Cliente cliente;
+	private Pessoa cliente;
 	private List<Produto> listaProdutos;
 	
 	public Pedido() {
 		super();
 		vendedor = new Vendedor();
-		cliente = new Cliente();
+		cliente = new Pessoa();
 		listaProdutos = new ArrayList<>();
 	}
 
@@ -33,11 +33,11 @@ public class Pedido extends Operacao{
 		this.vendedor = vendedor;
 	}
 
-	public Cliente getCliente() {
+	public Pessoa getCliente() {
 		return cliente;
 	}
 
-	public void setCliente(Cliente cliente) {
+	public void setCliente(Pessoa cliente) {
 		this.cliente = cliente;
 	}
 	public List<Produto> getListaProdutos() {

@@ -196,13 +196,13 @@ public class Executa {
 		
 		
 		//Por último, preciso de uma lista de 2 clientes que mais compraram dos dias a tal. 
-		List<Cliente> listaMaioresClientes = lista.clientesMaioresPorPeriodo(dataInicioPeriodo, dataFimPeriodo, 2);
+		List<Pessoa> listaMaioresClientes = lista.clientesMaioresPorPeriodo(dataInicioPeriodo, dataFimPeriodo, 2);
 		
 		
 		System.out.println("Temos as seguintes informações dos 2 maiores clientes no período informado: ");
 		
 		//E então.... Tcharammmm para cada cliente dessa lista, mostro que seu índex+1 (pq começa com zero...) cliente é... e mostro suas informações.
-		for (Cliente c : listaMaioresClientes){
+		for (Pessoa c : listaMaioresClientes){
 			System.out.println((listaMaioresClientes.indexOf(c)+1)+"º cliente = "+ c.toString());
 		}
 		
